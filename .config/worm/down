@@ -1,0 +1,9 @@
+#!/bin/bash
+
+pkill dunst
+pkill polybar
+pkill polkit-dumb-agent
+pkill powerkit
+pkill picom
+pkill sxhkd
+pkill alttab

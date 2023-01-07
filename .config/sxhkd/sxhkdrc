@@ -1,0 +1,41 @@
+super + ctrl + r
+	worm
+
+ctrl + alt + q
+	pkill worm
+
+super + q
+	wormc close-active-client
+
+super + f
+	wormc maximize-active-client
+
+super + h
+	wormc minimize-active-client
+
+super + {_, shift + } {1-9}
+	wormc {switch,move-active}-tag {1-9}
+
+super + m
+	wormc master-active
+
+ctrl + alt + c
+	wormc float-active
+
+super + space
+	rofi -show drun
+
+XF86MonBrightnessUp
+	light -A 10
+
+XF86MonBrightnessDown
+	light -U 10
+
+XF86AudioRaiseVolume
+	pactl -- set-sink-volume 0 +10%
+
+XF86AudioLowerVolume
+	pactl -- set-sink-volume 0 -10%
+
+super + Tab
+  rofi -show window
