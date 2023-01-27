@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ "$EUID" -ne 0 ]; then
+  echo "please run as root"
+  exit
+fi
+
+# remove orphans
+pacman -Qqd | pacman -Rsu -
+
+# remove all cached versions of uninstalled packages
+paccache -ruk0
+
+# remove all the cached packages that are not currently installed and the unused sync database
+pacman -Sc
